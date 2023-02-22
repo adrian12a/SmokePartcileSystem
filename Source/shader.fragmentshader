@@ -1,0 +1,11 @@
+#version 330 core
+
+in vec2 UV;
+out vec4 color;
+
+uniform sampler2D myTextureSampler;
+uniform float texalpha;
+
+void main(){
+	color = texture( myTextureSampler, UV ).rgba * vec4(texalpha, texalpha, texalpha, texalpha);
+}
